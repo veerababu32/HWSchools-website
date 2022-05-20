@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HWSchool</title>
+        <link rel="icon" type="image/png" href="images/HW-logo.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="header h-auto md:h-20 py-4 md:py-0 bg-red-900 flex items-center">
+            <section class="header__container flex justify-between w-full">
+                <div class="header__left flex lg:items-center flex-col lg:flex-row">
+                    <a href="javascript:void(0)" class="lg:mr-6 md:mr-4 cursor-pointer text-sm lg:text-lg md:text-base tracking-tight mb-1 md:mb-0">
+                        <i class="bi bi-telephone-fill"></i> Support Hotline: 586-217-2163
+                    </a>
+                    <a href="javascript:void(0)" class="cursor-pointer text-sm lg:text-lg md:text-base tracking-tight">
+                        <i class="bi bi-envelope-fill"></i> vctung@outlook.com
+                    </a>
+                </div>
+                <div class="header__right flex items-center">
+                    <a href="javascript:void(0)" class="bg-white text-black text-base py-2 px-3 lg:px-5 md:px-4 rounded-3xl cursor-pointer hover:bg-red-800 hover:text-white mr-3 tracking-tight">Sign Up</a>
+                    <label for="Languages"></label>
+                    <select id="Languages" class="header__languages bg-transparent text-white text-base rounded-3xl py-2 pl-3 pr-1 cursor-pointer outline-none">
+                        <option value="" disabled selected hidden class="tracking-tight">Select Language</option>
+                        <option value="English" class="text-black">English</option>
+                        <option value="Hindi" class="text-black">Hindi</option>
+                    </select>
+                </div>
+            </section>
+        </header>
+        <main>
+            <!-- Banner Section -->
+            <section class="banner overflow-hidden">
+                <nav class="banner__navbar w-full">
+                    <div class="banner__navbar-container">
+                        <div class="flex justify-between items-center h-auto py-8 flex-wrap xl:flex-nowrap">
+                            <a href="javascript:void(0)" class="flex items-center">
+                                <img src="images/HW-logo.png" alt="HW-logo" class="banner__navbar-logo border-red-900 rounded-full p-1 mr-2">
+                                <h2 class="font-normal text-lg tracking-tight">HW SCHOOL DISTRICT</h2>
+                            </a>
+                            <div class="hamburger" onclick="hamburgerSection()">
+                                <i id="barIcon"  class="bi bi-list"></i>
+                                <i id="crossIcon" class="disable bi bi-x-lg"></i>
+                            </div>
+                            <div class="banner__navbar-right" id="navbarRight">
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0">Home</a>
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0" for="Schools">
+                                    <select id="Schools" class="banner__navbar-schools bg-inherit outline-none cursor-pointer">
+                                        <option value="Schools">Schools</option>
+                                        <option value="Beacon Elementary">Beacon Elementary</option>
+                                        <option value="Tyrone Elementary">Tyrone Elementary</option>
+                                        <option value="HW Middle School">HW Middle School</option>
+                                        <option value="HW High School">HW High School</option>
+                                        <option value="Harper Academy">Harper Academy</option>
+                                    </select>
+                                </a>
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0" for="District">
+                                    <select id="District" class="banner__navbar-district bg-inherit outline-none cursor-pointer w-auto">
+                                        <option value="District Info">District Info</option>
+                                        <option value="Home">Home</option>
+                                        <option value="Board of Education">Board of Education</option>
+                                    </select>
+                                </a>
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0">Services</a>
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0">Nutrition</a>
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0" for="Education">
+                                    <select id="Education" class="bg-inherit outline-none cursor-pointer w-auto">
+                                        <option value="Education Services">Education Services</option>
+                                        <option value="Education Services">Education Services</option>
+                                    </select>
+                                </a>
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0" for="Athletics">
+                                    <select id="Athletics" class="bg-inherit outline-none cursor-pointer w-auto">
+                                        <option value="Athletics">Athletics</option>
+                                        <option value="Athletics">Athletics</option>
+                                    </select>
+                                </a>
+                                <a href="javascript:void(0)" class="font-normal text-base tracking-tight xl:mr-2 mb-2 xl:mb-0" for="More">
+                                    <select id="More" class="banner__navbar-more bg-inherit outline-none cursor-pointer w-auto">
+                                        <option value="More">More</option>
+                                        <option value="Menu">Menu</option>
+                                        <option value="Illuminate Education">Illuminate Education</option>
+                                        <option value="MI Star Parents">MI Star Parents</option>
+                                        <option value="MI Star Students">MI Star Students</option>
+                                        <option value="MI Star Teachers">MI Star Teachers</option>
+                                        <option value="KB Compass">KB Compass</option>
+                                        <option value="Atlas Rubicon Parents">Atlas Rubicon Parents</option>
+                                        <option value="Atlas Rubicon Teachers">Atlas Rubicon Teachers</option>
+                                    </select>
+                                </a>
+                                <div class="banner__navbar-search-box relative">
+                                    <input type="text" class="banner__navbar-search-text rounded-3xl outline-none" placeholder="Search...">
+                                    <a href="javascript:void(0)" class="banner__navbar-search-btn rounded-3xl">
+                                        <i class="bi bi-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="banner__hero flex flex-col justify-center">
+                    <div class="banner__hero-container relative flex w-full h-full">
+                        <div class="banner__hero-content xl:ml-12 flex flex-col justify-center lg:justify-center md:justify-start md:mt-28">
+                            <h1 class="2xl:text-7xl xl:text-5xl md:text-4xl text-3xl mb-10 inline-block">We are determined to achieve the highest standards</h1>
+                            <p class="text-base 2xl:text-xl mb-6 text-neutral-500 w-auto text-justify md:text-left md:w-11/12 tracking-wider">We are always availed to consult on taking your higher education to the next level so you can stay competitive in the global world.</p>
+                            <a href="javascript:void(0)" class="w-max z-10 bg-red-900 text-xl md:text-2xl inline-block rounded-full hover:bg-red-800 py-4 px-6 md:px-10">
+                                Enroll Now<i class="bi bi-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="absolute bottom-0 2xl:right-0 xl:-right-2 md:-right-16">
+                            <img src="images/student-img-one.png" alt="student-img-one" class="banner__hero-images">
+                        </div>
+                        <div class="absolute bottom-0 2xl:right-44 xl:right-56 lg:right-36 md:right-24">
+                            <img src="images/student-img-two.png" alt="student-img-two" class="banner__hero-images">
+                        </div>
+                        <div class="absolute bottom-0 2xl:-right-72 xl:-right-60 lg:-right-64 md:-right-52">
+                            <img src="images/student-img-three.png" alt="student-img-three" class="banner__hero-images">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Superintendent Section -->
+            <section class="superintendent flex flex-col justify-center">
+                <div class="superintendent__container relative flex lg:flex-row justify-center flex-col">
+                    <div class="absolute right-14 2xl:right-44 md:right-20 lg:right-12 top-2/4 superintendent__red-dot-lines-section">
+                        <img src="images/red-dot-lines.png" alt="red-dot-lines" class="md:m-12 lg:m-0 m-2 superintendent__red-dot-lines">
+                    </div>
+                    <div class="relative flex flex-col items-center mb-10 lg:mr-11">
+                        <div class="superintendent__ring absolute -left-5 xl:-left-12 lg:-left-6 md:-left-12 -top-12 rounded-full border-red-900"></div>
+                        <img src="images/superintendent-img.png" alt="superintendent-img" class="superintendent__img">
+                        <a href="javascript:void(0)" class="superintendent__name rounded text-base md:text-lg py-4 px-20 md:py-6 md:px-28 2xl:px-36 absolute -bottom-4 xl:-bottom-6 lg:bottom-4 hover:bg-red-800 hover:text-white">Kimmie Vo</a>
+                    </div>
+                    <div class="superintendent__content">
+                        <h2 class="superintendent__content-heading text-3xl md:text-5xl mb-6 lg:w-full xl:w-11/12">Superintendent Image & Name</h2>
+                        <p class="superintendent__content-description text-justify text-base md:text-lg tracking-wider">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Mission & Vision Section -->
+            <section class="mission-vision flex flex-col relative">
+                <img src="images/bg-red-img.png" alt="bg-red-img" class="h-full w-full">
+                <div class="mission-vision__container absolute left-0 right-0 h-full">
+                    <div class="flex flex-row">
+                        <div class="absolute xl:top-40 lg:top-20 md:top-16 left-0 top-14">
+                            <img src="images/mission-design-circles.png" alt="mission-design-circles">
+                        </div>
+                        <div class="absolute xl:top-64 lg:top-44 md:top-40 top-24">
+                            <img src="images/green-dot-lines.png" alt="green-dot-lines" class="mission-vision__mission-dot-lines">
+                        </div>
+                        <div class="absolute xl:left-16 lg:left-12 md:left-52 md:top-4 top-2 md:mx-0 mx-auto left-12 right-0 w-fit">
+                            <img src="images/blurred-img.png" alt="blurred-img" class="mission-vision__blurred-img 2xl:w-auto">
+                        </div>
+                        <div class="absolute xl:left-12 lg:left-8 md:left-32 -top-12 md:mx-0 mx-auto left-0 right-0 w-fit">
+                            <img src="images/mission-img.png" alt="mission-img" class="mission-vision__images 2xl:w-auto">
+                        </div>
+                        <div class="mission-vision__mission-content absolute top-24 lg:mx-0 mx-auto">
+                            <h2 class="text-3xl md:text-4xl mb-4 md:mb-6 font-normal">Mission</h2>
+                            <p class="text-justify text-lg md:text-xl mb-4 md:mb-6 font-normal tracking-wider">The Mission of Harper Woods School District is to provide a nurturing educational experience with a challenging academic curriculum aligned to every classroom that will challenge and prepare students for career, college and entrepreneurship readiness.</p>
+                            <a href="javascript:void(0)" class="text-lg md:text-xl bg-white font-normal rounded-full text-black px-10 md:px-16 py-3 md:py-4 inline-block hover:bg-red-800 hover:text-white">Read more</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-row-reverse">
+                        <div class="absolute lg:bottom-64 bottom-32">
+                            <img src="images/vision-design-circles.png" alt="mission-design-circles" class="mission-vision__vision-design-circles">
+                        </div>
+                        <div class="absolute lg:bottom-20 md:bottom-14 bottom-8 md:right-32 right-20 rotate-90">
+                            <img src="images/green-dot-lines.png" alt="green-dot-lines" class="mission-vision__vision-dot-lines">
+                        </div>
+                        <div class="absolute -bottom-16 xl:-bottom-24 lg:-bottom-20 xl:right-32 lg:right-20 md:right-52 md:mx-0 mx-auto md:left-auto left-0 right-0 w-fit">
+                            <img src="images/blurred-img.png" alt="blurred-img" class="mission-vision__blurred-img 2xl:w-auto">
+                        </div>
+                        <div class="absolute -bottom-14 xl:-bottom-20 lg:-bottom-16 xl:right-28 lg:right-16 md:right-44 md:mx-0 mx-auto md:left-auto left-0 right-12 w-fit">
+                            <img src="images/vision-img.png" alt="vision-img" class="mission-vision__images 2xl:w-auto">
+                        </div>
+                        <div class="mission-vision__vision-content absolute bottom-96 xl:bottom-24 lg:bottom-16 lg:mx-0 mx-auto">
+                            <h2 class="text-3xl md:text-4xl mb-4 md:mb-6 font-normal">Vision</h2>
+                            <p class="text-justify text-lg md:text-xl font-normal tracking-wider">Harper Woods School District is dedicated to providing a world class education through a collaborative effort the Board of Education, School Staff, Students, Families and Community Members to:
+                                <ul class="list-decimal list-inside text-lg md:text-xl font-normal text-justify tracking-wider mb-4 md:mb-6">
+                                    <li>Ignite the potential in every student</li>
+                                    <li>Inspire a passion for life-long learning</li>
+                                    <li>Prepare students to complete in a global society</li>
+                                </ul>
+                            </p>
+                            <a href="javascript:void(0)" class="text-lg md:text-xl bg-white font-normal rounded-full text-black px-10 md:px-16 py-3 md:py-4 inline-block hover:bg-red-800 hover:text-white lg:text-left md:text-right">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Why HW Schools Section -->
+            <section class="hw-schools flex flex-col justify-center items-center">
+                <div class="hw-schools__container flex flex-col items-center">
+                    <h2 class="text-3xl md:text-5xl font-normal text-center mb-6 2xl:mb-7">Why HW Schools</h2>
+                    <p class="hw-schools__description text-xl font-normal tracking-wider text-center mb-14 md:mb-28 w-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+                    <div class="hw-schools__card-content flex justify-between flex-wrap">
+                        <div class="hw-schools__cards flex flex-col py-8 px-6 mb-10 rounded-xl bg-red-900 text-white hover:bg-white hover:text-black">
+                            <i class="bi bi-bullseye hw-schools__cards-icon bg-transparent border border-white font-normal rounded-full flex justify-center items-center mb-8"></i>
+                            <h4 class="text-2xl mb-6 font-normal">Lorem Ipsum Dolar</h4>
+                            <p class="text-xl text-justify font-normal">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. </p>
+                        </div>
+                        <div class="hw-schools__cards flex flex-col py-8 px-6 mb-10 rounded-xl hover:bg-red-900 hover:text-white">
+                            <i class="bi bi-book hw-schools__cards-icon bg-red-400 rounded-full flex justify-center items-center mb-8"></i>
+                            <h4 class="text-2xl mb-6 font-normal">Lorem Ipsum Dolar</h4>
+                            <p class="text-xl text-justify font-normal">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. </p>
+                        </div>
+                        <div class="hw-schools__cards flex flex-col py-8 px-6 mb-10 rounded-xl hover:bg-red-900 hover:text-white">
+                            <i class="bi bi-file-earmark-check hw-schools__cards-icon bg-green-400 rounded-full flex justify-center items-center mb-8"></i>
+                            <h4 class="text-2xl mb-6 font-normal">Lorem Ipsum Dolar</h4>
+                            <p class="text-xl text-justify font-normal">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. </p>
+                        </div>
+                        <div class="hw-schools__cards flex flex-col py-8 px-6 mb-10 xl:mb-0 rounded-xl hover:bg-red-900 hover:text-white">
+                            <i class="bi bi-house-door hw-schools__cards-icon bg-blue-400 rounded-full flex justify-center items-center mb-8"></i>
+                            <h4 class="text-2xl mb-6 font-normal">Lorem Ipsum Dolar</h4>
+                            <p class="text-xl text-justify font-normal">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. </p>
+                        </div>
+                        <div class="hw-schools__cards flex flex-col py-8 px-6 rounded-xl hover:bg-red-900 hover:text-white">
+                            <figure class="hw-schools__cards-icon bg-amber-400 rounded-full flex justify-center items-center mb-8">
+                                <img src="images/medal-icon.png" alt="medal-icon">
+                            </figure>
+                            <h4 class="text-2xl mb-6 font-normal">Lorem Ipsum Dolar</h4>
+                            <p class="text-xl text-justify font-normal">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Schools Section -->
+            <section class="schools relative">
+                <div class="schools__container h-full absolute left-0 right-0">
+                    <div class="flex flex-col justify-center items-center">
+                        <h2 class="text-3xl md:text-5xl font-normal text-center mb-6 2xl:mb-7">Lorem Ipsum Dolar</h2>
+                        <p class="schools__description text-xl font-normal tracking-wider text-center mb-10 md:mb-12 lg:mb-20 2xl:mb-36">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!</p>
+                    </div>
+                    <div class="schools__red-dot-lines-section absolute bottom-48 md:bottom-56 right-11 lg:right-20 2xl:bottom-72 2xl:right-32">
+                        <img src="images/schools-red-dot-lines.png" alt="red-dot-lines" class="schools__red-dot-lines">
+                    </div>
+                    <div class="schools__slider">
+                        <div>
+                            <img src="images/beacon-elementary.png" alt="beacon-elementary" class="schools__cards-img rounded">
+                            <a href="javascript:void(0)" class="schools__cards-names flex justify-center items-center text-xl 2xl:text-2xl font-normal bg-white hover:bg-red-900 hover:text-white rounded">Beacon Elementary</a>
+                        </div>
+                        <div>
+                            <img src="images/tyrone-elementary.png" alt="tyrone-elementary" class="schools__cards-img rounded">
+                            <a href="javascript:void(0)" class="schools__cards-names flex justify-center items-center text-xl 2xl:text-2xl  font-normal bg-red-900 text-white hover:bg-white hover:text-black rounded">Tyrone Elementary</a>
+                        </div>
+                        <div>
+                            <img src="images/hw-middle-school.png" alt="HW-middle-school" class="schools__cards-img rounded">
+                            <a href="javascript:void(0)" class="schools__cards-names flex justify-center items-center text-xl 2xl:text-2xl  font-normal bg-white hover:bg-red-900 hover:text-white rounded">HW Middle School</a>
+                        </div>
+                        <div>
+                            <img src="images/hw-high-school.png" alt="HW-high-school" class="schools__cards-img rounded">
+                            <a href="javascript:void(0)" class="schools__cards-names flex justify-center items-center text-xl 2xl:text-2xl  font-normal bg-white hover:bg-red-900 hover:text-white rounded">HW High School</a>
+                        </div>
+                        <div>
+                            <img src="images/tyrone-elementary.png" alt="tyrone-elementary" class="schools__cards-img rounded">
+                            <a href="javascript:void(0)" class="schools__cards-names flex justify-center items-center text-xl 2xl:text-2xl  font-normal bg-red-900 text-white hover:bg-white hover:text-black rounded">Tyrone Elementary</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial Section -->
+            <section class="testimonial">
+                <div class="testimonial__container h-full flex flex-col relative">
+                    <div class="flex flex-col justify-center items-center">
+                        <h2 class="text-3xl md:text-5xl font-normal text-center mb-6 2xl:mb-7">Testimonial</h2>
+                        <p class="testimonial__description text-xl font-normal tracking-wider w-auto text-justify md:text-center mb-24 2xl:mb-36">Torquem detraxit hosti et quidem faciunt, ut et negent satis esse appetendum, alterum. Si sine causa? quae fuerit causa, mox videro; interea hoc epicurus in liberos.</p>
+                    </div>
+                    <div class="testimonial_slider">
+                        <div class="testimonial__cards rounded-2xl p-8 md:mr-6 h-auto">
+                            <div class="flex flex-col md:flex-row items-center mb-8">
+                                <img src="images/harrison-phillips-img.png" alt="Harrison-phillips-img" class="mb-4 md:mb-0 md:mr-7">
+                                <div class="flex flex-col items-center md:items-start">
+                                    <h4 class="text-xl font-normal">Harrison Phillips</h4>
+                                    <p class="text-lg">Lorem Ipsum</p>
+                                </div>
+                            </div>
+                            <p class="testimonial__cards-description text-base md:text-xl font-normal tracking-tight text-justify w-auto">Nisi cumque in necessitatibus molestiae eaque excepturi ab. Laboriosam ipsam voluptatem voluptatibus labore quam nihil. Quasi occaecati quos ratione quia aut molestiae velit et. Voluptatem id ea dicta</p>
+                        </div>
+                        <div class="testimonial__cards rounded-2xl p-8 md:mr-6 h-auto">
+                            <div class="flex flex-col md:flex-row items-center mb-8">
+                                <img src="images/ainara-vergara-img.png" alt="Ainara-vergara-img" class="mb-4 md:mb-0 md:mr-7">
+                                <div class="flex flex-col items-center md:items-start">
+                                    <h4 class="text-xl font-normal">Ainara Vergara</h4>
+                                    <p class="text-lg">Lorem Ipsum</p>
+                                </div>
+                            </div>
+                            <p class="testimonial__cards-description text-base md:text-xl font-normal tracking-tight text-justify w-auto">Nisi cumque in necessitatibus molestiae eaque excepturi ab. Laboriosam ipsam voluptatem voluptatibus labore quam nihil. Quasi occaecati quos ratione quia aut molestiae velit et. Voluptatem id ea dicta</p>
+                        </div>
+                        <div class="testimonial__cards rounded-2xl p-8 md:mr-6 h-auto">
+                            <div class="flex flex-col md:flex-row items-center mb-8">
+                                <img src="images/niek-bove-img.png" alt="Niek-bove-img" class="mb-4 md:mb-0 md:mr-7">
+                                <div class="flex flex-col items-center md:items-start">
+                                    <h4 class="text-xl font-normal">Niek Bove</h4>
+                                    <p class="text-lg">Lorem Ipsum</p>
+                                </div>
+                            </div>
+                            <p class="testimonial__cards-description text-base md:text-xl font-normal tracking-tight text-justify w-auto">Nisi cumque in necessitatibus molestiae eaque excepturi ab. Laboriosam ipsam voluptatem voluptatibus labore quam nihil. Quasi occaecati quos ratione quia aut molestiae velit et. Voluptatem id ea dicta</p>
+                        </div>
+                        <div class="testimonial__cards rounded-2xl p-8 md:mr-6 h-auto">
+                            <div class="flex flex-col md:flex-row items-center mb-8">
+                                <img src="images/ainara-vergara-img.png" alt="Ainara-vergara-img" class="mb-4 md:mb-0 md:mr-7">
+                                <div class="flex flex-col items-center md:items-start">
+                                    <h4 class="text-xl font-normal">Ainara Vergara</h4>
+                                    <p class="text-lg">Lorem Ipsum</p>
+                                </div>
+                            </div>
+                            <p class="testimonial__cards-description text-base md:text-xl font-normal tracking-tight text-justify w-auto">Nisi cumque in necessitatibus molestiae eaque excepturi ab. Laboriosam ipsam voluptatem voluptatibus labore quam nihil. Quasi occaecati quos ratione quia aut molestiae velit et. Voluptatem id ea dicta</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- More Information Section -->
+            <section class="more-information relative">
+                <img src="images/more-information-bg-img.png" alt="more-information-bg-img" class="h-full w-full">
+                <div class="more-information__container absolute left-0 right-0 top-0 bottom-0 flex flex-col justify-center">
+                    <h3 class="text-3xl md:text-5xl font-normal text-center mb-6 md:mb-10 text-red-900">For more information click the following links below</h3>
+                    <div class="flex flex-col lg:flex-row justify-center items-center">
+                        <div class="more-information__book-img bg-white flex justify-center items-center rounded-full lg:mr-11 mb-5 lg:mb-0">
+                            <img src="images/more-information-book-img.png" alt="more-information-book-img">
+                        </div>
+                        <ul class="list-disc list-inside lg:list-outside">
+                            <li class="mb-4 lg:mb-0">
+                                <a href="javascript:void(0)" class="text-xl lg:text-2xl text-gray-700 underline decoration-2">Information about school closing procedure</a>
+                            </li>
+                            <li class="mb-4 lg:mb-0">
+                                <a href="javascript:void(0)" class="text-xl lg:text-2xl text-gray-700 underline decoration-2">Check out the New Harper Woods College and Career Institute   Click for more  info!!</a>
+                            </li>
+                            <li class="mb-4 lg:mb-0">
+                                <a href="javascript:void(0)" class="text-xl lg:text-2xl text-gray-700 underline decoration-2">2020 - 2021 Student Code of Conduct Handbook</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- Lorem Progress Bars Section -->
+            <section class="lorem-progress-bars h-full">
+                <div class="lorem-progress-bars__container flex flex-col h-full">
+                    <div class="flex flex-col justify-center items-center">
+                        <h2 class="text-3xl md:text-5xl font-normal text-center mb-6 2xl:mb-7">Lorem Ipsum Dolar</h2>
+                        <p class="lorem-progress-bars__description text-xl font-normal tracking-wider text-center mb-10 md:mb-24 2xl:mb-32">Torquem detraxit hosti et quidem faciunt, ut et negent satis esse appetendum, alterum. Si sine causa? quae fuerit causa, mox videro; interea hoc epicurus in liberos.</p>
+                    </div>
+                    <div class="flex flex-wrap justify-center xl:justify-between xl:flex-nowrap">
+                        <div class="lorem-progress-bars__cards py-6 px-8 flex flex-col items-center mb-6 xl:mb-0">
+                            <div class="lorem-progress-bars__progress-bar-one flex justify-center items-center bg-red-50 text-xl md:text-2xl text-red-900 relative rounded-full overflow-hidden mb-4 md:mb-9">
+                                <span class="relative z-50 lorem-progress-bars__value-one">34</span>
+                                <div class="overlay w-1/2 h-full absolute top-0 left-0 bg-red-50"></div>
+                                <div class="left w-1/2 h-full absolute top-0 left-0"></div>
+                                <div class="right w-1/2 h-full absolute top-0 left-0"></div>
+                              </div>
+                            <h4 class="text-2xl font-normal mb-14">LOREM IPSUM</h4>
+                            <p class="lorem-progress-bars__cards-description text-xl font-normal text-center tracking-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                        </div>
+                        <div class="lorem-progress-bars__cards py-6 px-8 flex flex-col items-center mb-6 xl:mb-0">
+                            <div class="lorem-progress-bars__progress-bar-two flex justify-center items-center bg-green-50 text-xl md:text-2xl relative rounded-full overflow-hidden mb-4 md:mb-9">
+                                <span class="relative z-50 lorem-progress-bars__value-two">74</span>
+                                <div class="overlay w-1/2 h-full absolute top-0 left-0 bg-green-50"></div>
+                                <div class="left w-1/2 h-full absolute top-0 left-0"></div>
+                                <div class="right w-1/2 h-full absolute top-0 left-0"></div>
+                              </div>
+                            <h4 class="text-2xl font-normal mb-14">LOREM IPSUM</h4>
+                            <p class="lorem-progress-bars__cards-description text-xl font-normal text-center tracking-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                        </div>
+                        <div class="lorem-progress-bars__cards py-6 px-8 flex flex-col items-center">
+                            <div class="lorem-progress-bars__progress-bar-three flex justify-center items-center bg-yellow-50 text-yellow-400 text-xl md:text-2xl relative rounded-full overflow-hidden mb-4 md:mb-9">
+                                <span class="relative z-50 lorem-progress-bars__value-three">44</span>
+                                <div class="overlay w-1/2 h-full absolute top-0 left-0 bg-yellow-50"></div>
+                                <div class="left w-1/2 h-full absolute top-0 left-0"></div>
+                                <div class="right w-1/2 h-full absolute top-0 left-0"></div>
+                              </div>
+                            <h4 class="text-2xl font-normal mb-14">LOREM IPSUM</h4>
+                            <p class="lorem-progress-bars__cards-description text-xl font-normal text-center tracking-tight">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer Section -->
+        <footer class="footer relative">
+            <img src="images/bg-red-img.png" alt="bg-red-img" class="h-full w-full">
+            <div class="absolute top-0 left-0 right-0 flex flex-col h-full pt-32">
+                <div class="footer__container flex justify-between mb-4 md:mb-36 px-4 xl:flex-nowrap flex-wrap">
+                    <div class="footer__cards xl:mb-0 mb-6 mx-3 md:mx-0">
+                        <a href="javascript:void(0)" class="flex items-center mb-4 md:mb-5">
+                            <figure class="footer__img flex justify-center items-center rounded-full bg-white mr-2">
+                                <img src="images/HW-logo.png" alt="HW-logo">
+                            </figure>
+                            <h4 class="text-2xl font-normal">HW SCHOOL DISTRICT</h4>
+                        </a>
+                        <ul class="list-none mb-4 md:mb-16 xl:ml-16 sm:ml-0">
+                            <li class="flex items-center mb-2 md:mb-4">
+                                <i class="bi bi-geo-alt-fill mr-2"></i>
+                                <a href="javascript:void(0)" class="text-lg font-normal">1500 Treat Ave, Suite 200 San Francisco, CA 94110</a>
+                            </li>
+                            <li class="flex items-center mb-2 md:mb-4">
+                                <i class="bi bi-envelope-fill mr-2"></i>
+                                <a href="javascript:void(0)" class="text-lg font-normal">demo@hwschool.com</a>
+                            </li>
+                            <li class="flex items-center mb-2 md:mb-4">
+                                <i class="bi bi-telephone-fill mr-2"></i>
+                                <a href="javascript:void(0)" class="text-lg font-normal">586-217-2163 (Support)</a>
+                            </li>
+                        </ul>
+                        <div class="xl:ml-16 sm:ml-0">
+                            <h5 class="text-xl font-normal mb-6">FOLLOW US</h5>
+                            <div class="flex justify-between w-36">
+                                <a href="https://facebook.com" target="_blank" class="footer__social-links flex justify-center items-center border border-white rounded-full"><i class="bi bi-meta"></i></a>
+                                <a href="https://youtube.com" target="_blank" class="footer__social-links flex justify-center items-center border border-white rounded-full"><i class="bi bi-youtube"></i></a>
+                                <a href="https://twitter.com" target="_blank" class="footer__social-links flex justify-center items-center border border-white rounded-full"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__cards xl:mb-0 mb-6 ml-3 mr-auto md:ml-0 md:mr-0">
+                        <h4 class="text-2xl font-normal mt-3 mb-6 md:mb-9">School</h4>
+                        <ul class="list-none">
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">Beacon Elementary</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">Tyrone Elementary</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">HW Middle School</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">HW High School</a></li>
+                            <li><a href="javascript:void(0)" class="text-lg font-normal">Harper Academy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__cards xl:mb-0 mb-6 ml-auto mr-3 md:ml-0 md:mr-0">
+                        <h4 class="text-2xl font-normal mt-3 mb-6 md:mb-9">District Info</h4>
+                        <ul class="list-none">
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">Home</a></li>
+                            <li><a href="javascript:void(0)" class="text-lg font-normal">Board of Education</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__cards lg:mb-0 mb-6 xl:mr-0 lg:mr-6 mx-auto md:mx-0">
+                        <h4 class="text-2xl font-normal mt-3 mb-6 md:mb-9">More</h4>
+                        <ul class="list-none">
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">Menu</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">Illuminate Education</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">MI Star Parents</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">MI Star Students</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">MI Star Teachers</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">KB Compass</a></li>
+                            <li class="mb-4 md:mb-6"><a href="javascript:void(0)" class="text-lg font-normal">Atlas Rubicon Parents</a></li>
+                            <li><a href="javascript:void(0)" class="text-lg font-normal">Atlas Rubicon Teachers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__cards flex flex-col xl:mr-0 lg:mr-auto mx-auto md:mx-0">
+                        <h4 class="text-2xl font-normal mt-3 mb-6 md:mb-9">Listen Now</h4>
+                        <a href="javascript:void(0)" class="mb-8 md:mb-16"><img src="images/footer-woods-img.png" alt="footer-woods-img"></a>
+                        <div>
+                            <h4 class="text-2xl font-normal mb-4 md:mb-6">Transparency Reporting</h4>
+                            <a href="javascript:void(0)"><img src="images/footer-globe-img.png" alt="footer-globe-img" class="mb-5"></a>
+                            <a href="javascript:void(0)" class="text-xl font-normal">MI School Data</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__copyright-section flex justify-center h-auto ml:h-24 border-t-2">
+                    <a href="javascript:void(0)" class="text-lg md:text-2xl text-center font-normal py-4 md:py-8">© COPYRIGHT 2021. ALL RIGHTS RESERVED.</a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
